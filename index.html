@@ -24,7 +24,7 @@
   "url": "https://www.volkanhairstylist.com",
   "telephone": "+905551234567",
   "priceRange": "₺₺",
-  "image": "https://picsum.photos/seed/vhs-hero/1920/1200.webp",
+  "image": "unnamed (5).jpg",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Üçyol Mah. Şehit Nihatbey Cd. No: 24/A",
@@ -93,34 +93,6 @@ button{font-family:inherit;background:none;border:none;color:inherit}
 
 /* ---------- Film grain ---------- */
 .grain{position:fixed;inset:0;z-index:9500;pointer-events:none;opacity:.045;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/></filter><rect width="140" height="140" filter="url(%23n)"/></svg>')}
-
-/* ---------- Custom cursor ---------- */
-.cursor-dot,.cursor-ring{display:none}
-@media (hover:hover) and (pointer:fine){
-  .has-cursor,.has-cursor a,.has-cursor button,.has-cursor .srv-row,.has-cursor .ba-stage,.has-cursor iframe{cursor:none}
-  .cursor-dot{display:block;position:fixed;top:0;left:0;width:6px;height:6px;border-radius:50%;background:var(--white);z-index:10000;pointer-events:none;mix-blend-mode:difference;opacity:0;will-change:transform}
-  .cursor-ring{display:flex;align-items:center;justify-content:center;position:fixed;top:0;left:0;width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.75);z-index:10000;pointer-events:none;mix-blend-mode:difference;opacity:0;transition:width .35s var(--ease),height .35s var(--ease),background-color .35s,border-color .35s;will-change:transform}
-  .cursor-dot.live,.cursor-ring.live{opacity:1}
-  .cursor-ring.grow{width:58px;height:58px}
-  .cursor-ring.drag{width:86px;height:86px;background:var(--white);border-color:var(--white)}
-  .cursor-ring span{font-family:var(--sans);font-size:9px;font-weight:600;letter-spacing:.24em;color:var(--black);opacity:0;transition:opacity .3s}
-  .cursor-ring.drag span{opacity:1}
-}
-
-/* ---------- Loader ---------- */
-.loader{position:fixed;inset:0;z-index:9990;background:var(--black);display:grid;place-items:center;transition:transform .85s var(--ease) .1s}
-.loader.done{transform:translateY(-101%)}
-.loader-box{display:flex;flex-direction:column;align-items:center;gap:22px}
-.loader-word{display:flex;gap:.14em;font-family:var(--serif);font-size:clamp(2rem,6vw,3.2rem);letter-spacing:.1em}
-.loader-word span{opacity:0;transform:translateY(24px);animation:letterIn .7s var(--ease) forwards}
-.loader-word span:nth-child(1){animation-delay:.05s}.loader-word span:nth-child(2){animation-delay:.12s}
-.loader-word span:nth-child(3){animation-delay:.19s}.loader-word span:nth-child(4){animation-delay:.26s}
-.loader-word span:nth-child(5){animation-delay:.33s}.loader-word span:nth-child(6){animation-delay:.40s}
-@keyframes letterIn{to{opacity:1;transform:none}}
-.loader-line{width:170px;height:1px;background:rgba(255,255,255,.18);overflow:hidden}
-.loader-line i{display:block;height:100%;background:var(--white);width:0;animation:lineIn 1.1s var(--ease) .3s forwards}
-@keyframes lineIn{to{width:100%}}
-.loader-tag{font-size:9px;font-weight:500;letter-spacing:.42em;text-transform:uppercase;color:var(--muted);opacity:0;animation:letterIn .8s var(--ease) .5s forwards}
 
 /* ---------- Header ---------- */
 .header{position:fixed;top:0;left:0;right:0;z-index:900;padding:22px 0;transition:padding .5s var(--ease),background-color .5s,border-color .5s;border-bottom:1px solid transparent}
@@ -387,697 +359,659 @@ body.loaded .hero-el{opacity:1;transform:none}
 <!-- SVG Sprite -->
 <svg style="display:none" aria-hidden="true">
   <symbol id="ic-star" viewBox="0 0 24 24"><path d="M12 2.6l2.9 5.9 6.5.95-4.7 4.6 1.1 6.5L12 17.5l-5.8 3.05 1.1-6.5-4.7-4.6 6.5-.95z"/></symbol>
-  <symbol id="ic-wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
-  <symbol id="ic-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="4.8"/><circle cx="12" cy="12" r="4.2"/></g><circle cx="17.4" cy="6.6" r="1" fill="currentColor"/></symbol>
-  <symbol id="ic-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M7 17 17 7M9 7h8v8"/></symbol>
-  <symbol id="ic-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M12 21s-7-5.4-7-11a7 7 0 1 1 14 0c0 5.6-7 11-7 11z"/><circle cx="12" cy="10" r="2.6" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
-  <symbol id="ic-phone" viewBox="0 0 24 24"><path d="M6.6 10.8c1.5 2.9 3.7 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></symbol>
-  <symbol id="ic-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3.2 2"/></g></symbol>
-  <symbol id="ic-chev" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M9.5 6 4.5 12l5 6M14.5 6l5 6-5 6"/></symbol>
+  <symbol id="ic-wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.485 3.51"/></symbol>
+  <symbol id="ic-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M5 12h14M12 5l7 7-7 7"/></symbol>
+  <symbol id="ic-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></symbol>
+  <symbol id="ic-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="ic-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 6v6l4 2"/></symbol>
+  <symbol id="ic-ig" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="none" stroke="currentColor" stroke-width="1.8"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
 </svg>
+
+<div class="grain"></div>
 
 <!-- Loader -->
 <div class="loader" id="loader">
   <div class="loader-box">
-    <div class="loader-word"><span>V</span><span>O</span><span>L</span><span>K</span><span>A</span><span>N</span></div>
+    <div class="loader-word">
+      <span>V</span><span>O</span><span>L</span><span>K</span><span>A</span><span>N</span>
+    </div>
     <div class="loader-line"><i></i></div>
-    <span class="loader-tag">Hair Stylist — İzmir Üçyol</span>
+    <div class="loader-tag">HAIR STYLIST — İZMİR ÜÇYOL</div>
   </div>
 </div>
-
-<!-- Custom cursor -->
-<div class="cursor-dot" id="cDot"></div>
-<div class="cursor-ring" id="cRing"><span id="cLabel">SÜRÜKLE</span></div>
-
-<div class="grain" aria-hidden="true"></div>
 
 <!-- Header -->
 <header class="header" id="header">
   <div class="wrap header-inner">
-    <a href="#top" class="logo" aria-label="Volkan Hair Stylist — İzmir Üçyol bayan kuaförü ana sayfa">
-      <span class="logo-mark">VOLKAN<em>.</em></span>
-      <span class="logo-sub">Hair Stylist · İzmir Üçyol</span>
+    <a href="#" class="logo">
+      <span class="logo-mark">VOLKAN <em>Hair Stylist</em></span>
+      <span class="logo-sub">İzmir Üçyol — Butik Salon</span>
     </a>
-    <nav class="nav" aria-label="Ana menü">
-      <a href="#hakkimizda">Hakkımızda</a>
-      <a href="#hizmetler">Hizmetler</a>
-      <a href="#donusumler">Dönüşümler</a>
-      <a href="#galeri">Galeri</a>
-      <a href="#yorumlar">Yorumlar</a>
-      <a href="#iletisim">İletişim</a>
+    <nav class="nav">
+      <a href="#about">Hakkımızda</a>
+      <a href="#services">Hizmetler</a>
+      <a href="#before-after">Dönüşüm</a>
+      <a href="#gallery">Galeri</a>
+      <a href="#reviews">Yorumlar</a>
+      <a href="#contact">İletişim</a>
     </nav>
     <div class="header-right">
-      <a class="btn btn-solid header-cta" href="https://wa.me/905551234567?text=Merhaba%2C%20randevu%20almak%20istiyorum." target="_blank" rel="noopener"><span>Randevu Al</span></a>
-      <button class="burger" id="burger" aria-label="Menüyü aç/kapat"><span></span><span></span></button>
+      <a href="https://wa.me/905551234567?text=Merhaba,%20randevu%20almak%20istiyorum." target="_blank" rel="noopener" class="btn btn-solid header-cta">
+        <span>Quick Randevu</span>
+        <svg><use href="#ic-wa"/></svg>
+      </a>
+      <button class="burger" id="burger" aria-label="Menü">
+        <span></span><span></span>
+      </button>
     </div>
   </div>
 </header>
 
-<!-- Mobile menu -->
+<!-- Mobile Menu -->
 <div class="menu" id="menu">
-  <nav aria-label="Mobil menü">
-    <a class="m-link" href="#hakkimizda"><em>01</em>Hakkımızda</a>
-    <a class="m-link" href="#hizmetler"><em>02</em>Hizmetler</a>
-    <a class="m-link" href="#donusumler"><em>03</em>Dönüşümler</a>
-    <a class="m-link" href="#galeri"><em>04</em>Galeri</a>
-    <a class="m-link" href="#yorumlar"><em>05</em>Yorumlar</a>
-    <a class="m-link" href="#iletisim"><em>06</em>İletişim</a>
-  </nav>
+  <a href="#about" class="m-link"><em>01</em>Hakkımızda</a>
+  <a href="#services" class="m-link"><em>02</em>Hizmetler &amp; Fiyatlar</a>
+  <a href="#before-after" class="m-link"><em>03</em>Öncesi / Sonrası</a>
+  <a href="#gallery" class="m-link"><em>04</em>Saç Galerisi</a>
+  <a href="#reviews" class="m-link"><em>05</em>Müşteri Yorumları</a>
+  <a href="#contact" class="m-link"><em>06</em>Adres &amp; İletişim</a>
   <div class="m-foot">
-    <a href="https://wa.me/905551234567?text=Merhaba%2C%20randevu%20almak%20istiyorum." target="_blank" rel="noopener"><svg><use href="#ic-wa"/></svg>WhatsApp ile Randevu</a>
+    <a href="https://wa.me/905551234567?text=Merhaba,%20randevu%20almak%20istiyorum." target="_blank" rel="noopener">
+      <span>WhatsApp Randevu Al</span>
+      <svg><use href="#ic-wa"/></svg>
+    </a>
   </div>
 </div>
 
-<main>
-  <!-- 1. HERO -->
-  <section class="hero" id="top">
-    <div class="hero-bg">
-      <img src="https://picsum.photos/seed/vhs-hero/1920/1200.webp?grayscale" alt="İzmir Üçyol bayan kuaförü Volkan Hair Stylist — lüks salon atmosferi" fetchpriority="high">
-    </div>
-    <div class="hero-side">Est. 2009 — İzmir Üçyol</div>
-    <div class="wrap hero-content">
-      <p class="eyebrow hero-el"><span class="dash"></span>İzmir Üçyol · Bayan Kuaförü</p>
-      <h1 class="hero-el">İzmir Üçyol'da <em>saç tasarımı</em> ve lüks bakımın adresi</h1>
-      <p class="hero-sub hero-el">Kesim, renk, baleyaj, keratin bakımı ve gelin saçı — Üçyol'un kalbinde, 5.0 puanlı butik kuaför salonu.</p>
-      <div class="hero-cta hero-el">
-        <a class="btn btn-solid" href="https://wa.me/905551234567?text=Merhaba%2C%20randevu%20almak%20istiyorum." target="_blank" rel="noopener">
-          <svg><use href="#ic-wa"/></svg><span>WhatsApp ile Quick Randevu</span>
-        </a>
-        <a class="btn btn-ghost" href="#hizmetler"><span>Hizmetleri İncele</span></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Marquee -->
-  <div class="marquee" aria-hidden="true">
-    <div class="mq-track">
-      <div class="mq-item"><span>Saç Tasarımı</span><i class="dia"></i><span>Renk &amp; Baleyaj</span><i class="dia"></i><span>Keratin &amp; Bakım</span><i class="dia"></i><em>Gelin Paketi</em><i class="dia"></i><span>Fön &amp; Styling</span><i class="dia"></i><span>5.0 Google Puanı</span><i class="dia"></i><span>İzmir Üçyol</span><i class="dia"></i></div>
-      <div class="mq-item"><span>Saç Tasarımı</span><i class="dia"></i><span>Renk &amp; Baleyaj</span><i class="dia"></i><span>Keratin &amp; Bakım</span><i class="dia"></i><em>Gelin Paketi</em><i class="dia"></i><span>Fön &amp; Styling</span><i class="dia"></i><span>5.0 Google Puanı</span><i class="dia"></i><span>İzmir Üçyol</span><i class="dia"></i></div>
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-bg">
+    <img src="unnamed (5).jpg" alt="Volkan Hair Stylist İzmir Üçyol Salon">
+  </div>
+  <div class="hero-side">İzmir Üçyol · 5.0 Google Puanı · Butik Saç Tasarımı</div>
+  <div class="wrap hero-content">
+    <div class="eyebrow hero-el"><span class="dash"></span>İzmir Üçyol Bayan Kuaförü</div>
+    <h1 class="hero-el">Saçınızda <em>Sanat</em>,<br>Görünümünüzde <em>Lüks</em>.</h1>
+    <p class="hero-sub hero-el">Kişiye özel baleyaj, keratin bakımı, perma ve profesyonel gelin saçı &amp; makyaj uygulamalarıyla Üçyol'da lüks kuaför deneyimi.</p>
+    <div class="hero-cta hero-el">
+      <a href="https://wa.me/905551234567?text=Merhaba,%20randevu%20bilgisi%20almak%20istiyorum." target="_blank" rel="noopener" class="btn btn-solid">
+        <span>WhatsApp Quick Randevu</span>
+        <svg><use href="#ic-wa"/></svg>
+      </a>
+      <a href="#services" class="btn btn-ghost">
+        <span>Hizmetleri İncele</span>
+        <svg><use href="#ic-arrow"/></svg>
+      </a>
     </div>
   </div>
+</section>
 
-  <!-- 2. ABOUT -->
-  <section class="about sec" id="hakkimizda">
-    <div class="wrap about-grid">
-      <div class="about-copy reveal">
-        <p class="eyebrow"><span class="dash"></span>01 — Hakkımızda &amp; Usta</p>
-        <h2 class="sec-title">Ustalık, <em>detayda</em> gizlidir.</h2>
-        <p><strong>Volkan Hair Stylist</strong>, 2009'dan bu yana İzmir Üçyol'da misafirlerinin güvenini kazanan butik bir <strong>bayan kuaförü salonudur</strong>. Kurucusu Volkan, saç tasarımındaki 15 yılı aşkın tecrübesini İstanbul ve Avrupa'da aldığı ileri eğitim programlarıyla harmanlayarak her misafirine kişiye özel bir stil danışmanlığı sunar.</p>
-        <p>Ekibimiz; kesim, renk, baleyaj, keratin bakımı ve gelin saçı tasarımında son trendleri kendi ustalık yorumuyla buluşturur. Her işlem öncesi yapılan detaylı saç analiziyle, yüz hatlarınıza ve yaşam tarzınıza en uygun sonucu garanti ederiz. Bizim için her saç, imzamızı taşıyan bir eserdir.</p>
-        <p class="sig">— Volkan</p>
-        <div class="stats" data-stagger>
-          <div class="stat reveal"><b><span data-count="15" data-suffix="+">0</span></b><span>Yıllık Deneyim</span></div>
-          <div class="stat reveal"><b><span data-count="5000" data-suffix="+">0</span></b><span>Mutlu Misafir</span></div>
-          <div class="stat reveal"><b><span data-count="5" data-decimals="1">0</span></b><span>Google Puanı</span></div>
-        </div>
-      </div>
-      <div class="about-visual reveal">
-        <div class="frame">
-          <img src="https://picsum.photos/seed/vhs-master/900/1150.webp?grayscale" alt="Volkan Hair Stylist kurucusu — İzmir Üçyol bayan kuaförü usta" loading="lazy" decoding="async">
-        </div>
-        <div class="badge" aria-hidden="true">
-          <svg class="ring" viewBox="0 0 100 100">
-            <defs><path id="circPath" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/></defs>
-            <text><textPath href="#circPath">Volkan Hair Stylist · İzmir Üçyol ·</textPath></text>
-          </svg>
-          <div class="badge-core"><b>EST.</b><i>2009</i></div>
-        </div>
+<!-- Marquee -->
+<div class="marquee" aria-hidden="true">
+  <div class="mq-track">
+    <div class="mq-item"><span>Baleyaj &amp; Ombre</span><span class="dia"></span><em>Keratin Bakımı</em><span class="dia"></span><span>Gelin Saçı &amp; Makyaj</span><span class="dia"></span><em>Brezilya Fönü</em><span class="dia"></span><span>Kalıcı Perma</span><span class="dia"></span><em>Özel Saç Renklendirme</em><span class="dia"></span></div>
+    <div class="mq-item"><span>Baleyaj &amp; Ombre</span><span class="dia"></span><em>Keratin Bakımı</em><span class="dia"></span><span>Gelin Saçı &amp; Makyaj</span><span class="dia"></span><em>Brezilya Fönü</em><span class="dia"></span><span>Kalıcı Perma</span><span class="dia"></span><em>Özel Saç Renklendirme</em><span class="dia"></span></div>
+  </div>
+</div>
+
+<!-- About -->
+<section class="sec about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-copy reveal">
+      <div class="eyebrow"><span class="dash"></span>Uzmanlık &amp; Tutku</div>
+      <h2 class="sec-title">Her Saç Teline <em>Özel</em> Dokunuş.</h2>
+      <p>İzmir Üçyol'da yer alan <strong>Volkan Hair Stylist</strong>, klasik kuaförlük anlayışının ötesine geçerek saç sağlığını ön planda tutan kişiselleştirilmiş renklendirme ve stil hizmetleri sunar.</p>
+      <p>Yılların kazandırdığı deneyim, mikro detaylara verilen önem ve dünyaca ünlü profesyonel ürünlerle saçınızın doğal yapısını koruyarak hayal ettiğiniz görünüme kavuşmanızı sağlıyoruz.</p>
+      <p class="sig">Volkan Hair Stylist</p>
+      <div class="stats">
+        <div class="stat"><b>5.0</b><span>Google Puanı</span></div>
+        <div class="stat"><b>10+</b><span>Yıl Deneyim</span></div>
+        <div class="stat"><b>%100</b><span>Memnuniyet</span></div>
       </div>
     </div>
-  </section>
+    <div class="about-visual reveal">
+      <div class="frame">
+        <img src="unnamed (7).jpg" alt="Volkan Hair Stylist Saç Kesim ve Renklendirme">
+      </div>
+      <div class="badge">
+        <svg class="ring" viewBox="0 0 120 120">
+          <path id="txt-path" fill="none" d="M 60,60 m -45,0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0"/>
+          <text><textPath href="#txt-path" startOffset="0%">• VOLKAN HAIR STYLIST • İZMİR ÜÇYOL </textPath></text>
+        </svg>
+        <div class="badge-core"><b>5.0</b><i>RATING</i></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <!-- 3. SERVICES -->
-  <section class="services sec" id="hizmetler">
-    <div class="wrap">
-      <div class="sec-head reveal">
+<!-- Services -->
+<section class="sec services" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <div class="eyebrow"><span class="dash"></span>Hizmet Listesi</div>
+        <h2 class="sec-title">Profesyonel <em>İşlemler</em>.</h2>
+      </div>
+      <div class="sec-note">Tüm renklendirme ve bakım işlemlerimizde saç tipinize özel profesyonel ürünler kullanılmaktadır. Fiyatlar saç uzunluğuna göre değişiklik gösterebilir.</div>
+    </div>
+
+    <div class="srv-list">
+      <div class="srv-row reveal" data-img="unnamed (5).jpg">
+        <span class="srv-num">01</span>
         <div>
-          <p class="eyebrow"><span class="dash"></span>02 — Hizmetler &amp; Fiyat Listesi</p>
-          <h2 class="sec-title">Her saça <em>özel</em> bir dokunuş.</h2>
+          <div class="srv-name">Kesim &amp; Şekillendirme</div>
+          <div class="srv-desc">Yüz tipinize en uygun modern kesim, yıkama ve özel fön uygulaması.</div>
         </div>
-        <p class="sec-note">Fiyatlar başlangıç olup saç uzunluğuna, yoğunluğuna ve işlem kapsamına göre değişiklik gösterebilir. Net fiyat için WhatsApp'tan bize yazın.</p>
+        <div class="srv-price">₺400 <small>başlayan</small></div>
+        <div class="srv-arrow"><svg><use href="#ic-arrow"/></svg></div>
       </div>
 
-      <div class="srv-list" id="srvList">
-        <div class="srv-row reveal" data-img="https://picsum.photos/seed/vhs-s1/640/440.webp?grayscale" data-hover>
-          <span class="srv-num">01.</span>
-          <div class="srv-main">
-            <h3 class="srv-name">Saç Kesimi &amp; Şekillendirme</h3>
-            <p class="srv-desc">Yüz tipinize özel kesim, danışmanlık ve fön dahil</p>
-          </div>
-          <span class="srv-price">₺450<small>’den</small></span>
-          <span class="srv-arrow"><svg><use href="#ic-arrow"/></svg></span>
-        </div>
-        <div class="srv-row reveal" data-img="https://picsum.photos/seed/vhs-s2/640/440.webp?grayscale" data-hover>
-          <span class="srv-num">02.</span>
-          <div class="srv-main">
-            <h3 class="srv-name">Renk &amp; Boya</h3>
-            <p class="srv-desc">Premium boyalarla tam kapama, tonlama ve cila</p>
-          </div>
-          <span class="srv-price">₺1.100<small>’den</small></span>
-          <span class="srv-arrow"><svg><use href="#ic-arrow"/></svg></span>
-        </div>
-        <div class="srv-row reveal" data-img="https://picsum.photos/seed/vhs-s3/640/440.webp?grayscale" data-hover>
-          <span class="srv-num">03.</span>
-          <div class="srv-main">
-            <h3 class="srv-name">Baleyaj &amp; Röfle</h3>
-            <p class="srv-desc">Doğal geçişli, güneş öpücüklü açık tonlar</p>
-          </div>
-          <span class="srv-price">₺1.900<small>’den</small></span>
-          <span class="srv-arrow"><svg><use href="#ic-arrow"/></svg></span>
-        </div>
-        <div class="srv-row reveal" data-img="https://picsum.photos/seed/vhs-s4/640/440.webp?grayscale" data-hover>
-          <span class="srv-num">04.</span>
-          <div class="srv-main">
-            <h3 class="srv-name">Keratin &amp; Saç Botoksu</h3>
-            <p class="srv-desc">Cila etkisi, 3 aya kadar süreklilik sağlayan bakım</p>
-          </div>
-          <span class="srv-price">₺1.400<small>’den</small></span>
-          <span class="srv-arrow"><svg><use href="#ic-arrow"/></svg></span>
-        </div>
-        <div class="srv-row reveal" data-img="https://picsum.photos/seed/vhs-s5/640/440.webp?grayscale" data-hover>
-          <span class="srv-num">05.</span>
-          <div class="srv-main">
-            <h3 class="srv-name">Gelin Paketi</h3>
-            <p class="srv-desc">Saç + makyaj + deneme seansı + özel bakım ritüeli</p>
-          </div>
-          <span class="srv-price">Özel</span>
-          <span class="srv-arrow"><svg><use href="#ic-arrow"/></svg></span>
-        </div>
-        <div class="srv-row reveal" data-img="https://picsum.photos/seed/vhs-s6/640/440.webp?grayscale" data-hover>
-          <span class="srv-num">06.</span>
-          <div class="srv-main">
-            <h3 class="srv-name">Fön &amp; Günlük Styling</h3>
-            <p class="srv-desc">Düğün, nişan ve özel davetler için şıklık</p>
-          </div>
-          <span class="srv-price">₺350<small>’den</small></span>
-          <span class="srv-arrow"><svg><use href="#ic-arrow"/></svg></span>
-        </div>
-      </div>
-
-      <div class="srv-foot reveal">
-        <p>* Kişiye özel işlemler (dönüşüm renkleri, düzeltme işlemleri, organizasyon styling) için fiyat, saç analizi sonrası netleştirilir.</p>
-        <a class="btn btn-ghost" href="https://wa.me/905551234567?text=Merhaba%2C%20fiyat%20teklifi%20almak%20istiyorum." target="_blank" rel="noopener"><svg><use href="#ic-wa"/></svg><span>Fiyat Teklifi Al</span></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4. BEFORE / AFTER -->
-  <section class="ba-sec sec" id="donusumler">
-    <div class="wrap">
-      <div class="sec-head reveal">
+      <div class="srv-row reveal" data-img="unnamed (7).jpg">
+        <span class="srv-num">02</span>
         <div>
-          <p class="eyebrow"><span class="dash"></span>03 — Öncesi / Sonrası</p>
-          <h2 class="sec-title">Dönüşümler <em>konuşur.</em></h2>
+          <div class="srv-name">Baleyaj &amp; Ombre &amp; Sombre</div>
+          <div class="srv-desc">Doğal geçişli ışıltılar, mikro röfle ve saç yapısını koruyan açma işlemleri.</div>
         </div>
-        <p class="sec-note">Kolu sürükleyerek salonda gerçekleşen gerçek dönüşümleri yakından inceleyin.</p>
+        <div class="srv-price">₺2.200 <small>başlayan</small></div>
+        <div class="srv-arrow"><svg><use href="#ic-arrow"/></svg></div>
       </div>
 
-      <div class="ba-wrap">
-        <div class="ba-tabs reveal" role="tablist" aria-label="Dönüşüm seçimi">
-          <button class="ba-tab active" role="tab" aria-selected="true"
-            data-before="https://picsum.photos/seed/vhs-b1a/1200/750.webp?grayscale"
-            data-after="https://picsum.photos/seed/vhs-b1b/1200/750.webp?grayscale">01 — Renk &amp; Kesim</button>
-          <button class="ba-tab" role="tab" aria-selected="false"
-            data-before="https://picsum.photos/seed/vhs-b2a/1200/750.webp?grayscale"
-            data-after="https://picsum.photos/seed/vhs-b2b/1200/750.webp?grayscale">02 — Baleyaj &amp; Bakım</button>
-        </div>
-
-        <div class="ba-stage reveal" id="baStage" data-label="SÜRÜKLE" data-hover>
-          <img class="ba-img ba-after" id="baAfter" src="https://picsum.photos/seed/vhs-b1b/1200/750.webp?grayscale" alt="İzmir Üçyol kuaför sonrası — saç tasarımı dönüşümü sonucu" loading="lazy" decoding="async">
-          <img class="ba-img ba-before" id="baBefore" src="https://picsum.photos/seed/vhs-b1a/1200/750.webp?grayscale" alt="İzmir Üçyol kuaför öncesi — saç tasarımı dönüşümü başlangıcı" loading="lazy" decoding="async">
-          <span class="ba-tag ba-tag-l">Öncesi</span>
-          <span class="ba-tag ba-tag-r">Sonrası</span>
-          <div class="ba-line" aria-hidden="true"></div>
-          <button class="ba-handle" id="baHandle" aria-label="Karşılaştırma kolunu sürükleyin">
-            <svg><use href="#ic-chev"/></svg>
-          </button>
-        </div>
-
-        <p class="ba-hint reveal"><span class="dash"></span>Görsel üzerinde sürükleyin ya da ok tuşlarını kullanın</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5. GALLERY -->
-  <section class="gallery sec" id="galeri">
-    <div class="wrap">
-      <div class="sec-head reveal">
+      <div class="srv-row reveal" data-img="unnamed (8).jpg">
+        <span class="srv-num">03</span>
         <div>
-          <p class="eyebrow"><span class="dash"></span>04 — Gerçek Salon Fotoğrafları</p>
-          <h2 class="sec-title">Saç <em>galerisi.</em></h2>
+          <div class="srv-name">Keratin Bakımı &amp; Brezilya Fönü</div>
+          <div class="srv-desc">Yıpranmış saçlara yoğun nem ve protein yüklemesi, 4-6 ay kalıcı pürüzsüzlük.</div>
         </div>
-        <a class="ig-link" href="https://instagram.com/volkanhairstylist" target="_blank" rel="noopener"><svg><use href="#ic-ig"/></svg>Instagram'da Takip Edin</a>
+        <div class="srv-price">₺1.800 <small>başlayan</small></div>
+        <div class="srv-arrow"><svg><use href="#ic-arrow"/></svg></div>
       </div>
 
-      <div class="masonry" data-stagger>
-        <figure class="g-item reveal">
-          <img loading="lazy" decoding="async" src="https://picsum.photos/seed/vhs-g1/800/1050.webp?grayscale" alt="İzmir Üçyol bayan kuaförü — baleyaj ve tonlama çalışması">
-          <figcaption><span>Baleyaj &amp; Tonlama</span><em>Saç Renklendirme</em></figcaption>
-        </figure>
-        <figure class="g-item reveal">
-          <img loading="lazy" decoding="async" src="https://picsum.photos/seed/vhs-g2/800/700.webp?grayscale" alt="İzmir Üçyol kuaför — modern bob kesim modeli">
-          <figcaption><span>Bob Kesim</span><em>Saç Kesimi</em></figcaption>
-        </figure>
-        <figure class="g-item reveal">
-          <img loading="lazy" decoding="async" src="https://picsum.photos/seed/vhs-g3/800/1150.webp?grayscale" alt="İzmir gelin saçı — Volkan Hair Stylist gelin paketi çalışması">
-          <figcaption><span>Gelin Saçı</span><em>Bridal Styling</em></figcaption>
-        </figure>
-        <figure class="g-item reveal">
-          <img loading="lazy" decoding="async" src="https://picsum.photos/seed/vhs-g4/800/800.webp?grayscale" alt="İzmir Üçyol kuaför salon — keratin bakım uygulaması">
-          <figcaption><span>Keratin Bakım</span><em>Saç Bakımı</em></figcaption>
-        </figure>
-        <figure class="g-item reveal">
-          <img loading="lazy" decoding="async" src="https://picsum.photos/seed/vhs-g5/800/1000.webp?grayscale" alt="İzmir Üçyol bayan kuaförü — ışıltılı sarı saç rengi">
-          <figcaption><span>Işıltılı Sarı</span><em>Renk &amp; Boya</em></figcaption>
-        </figure>
-        <figure class="g-item reveal">
-          <img loading="lazy" decoding="async" src="https://picsum.photos/seed/vhs-g6/800/680.webp?grayscale" alt="İzmir Üçyol kuaför — özel gün fönü ve styling">
-          <figcaption><span>Fön &amp; Styling</span><em>Günlük Şıklık</em></figcaption>
-        </figure>
-        <figure class="g-item reveal">
-          <img loading="lazy" decoding="async" src="https://picsum.photos/seed/vhs-g7/800/1100.webp?grayscale" alt="İzmir Üçyol bayan kuaförü — uzun katlı saç kesimi">
-          <figcaption><span>Uzun Katlı Kesim</span><em>Saç Kesimi</em></figcaption>
-        </figure>
-        <figure class="g-item reveal">
-          <img loading="lazy" decoding="async" src="https://picsum.photos/seed/vhs-g8/800/760.webp?grayscale" alt="İzmir Üçyol kuaför — doğal dalga saç styling">
-          <figcaption><span>Doğal Dalgalar</span><em>Styling</em></figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- 6. PROMO -->
-  <section class="promo sec">
-    <div class="promo-bg"><img src="https://picsum.photos/seed/vhs-promo/1920/900.webp?grayscale" alt="İzmir Üçyol gelin paketi kampanyası — Volkan Hair Stylist" loading="lazy" decoding="async"></div>
-    <div class="wrap">
-      <div class="promo-frame reveal">
-        <p class="eyebrow"><span class="dash"></span>Kampanya — Sınırlı Kontenjan<span class="dash"></span></p>
-        <h2>2026 Gelin Paketi'nde <em>%20</em> erken rezervasyon indirimi</h2>
-        <p>Düğün sabahınızı bizimle taçlandırın. Deneme seansı, düğün günü saç &amp; makyaj ve özel bakım ritüelini kapsayan paketlerimiz için yerinizi şimdiden ayırtın.</p>
-        <div class="promo-perks">
-          <span>Deneme Seansı</span><i class="dia"></i>
-          <span>Saç &amp; Makyaj</span><i class="dia"></i>
-          <span>Özel Bakım Ritüeli</span><i class="dia"></i>
-          <span>Öncelikli Randevu</span>
-        </div>
-        <div class="promo-cta">
-          <a class="btn btn-solid" href="https://wa.me/905551234567?text=Merhaba%2C%20gelin%20paketi%20kampanyas%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener"><svg><use href="#ic-wa"/></svg><span>Kampanyayı WhatsApp'tan Sor</span></a>
-          <a class="btn btn-ghost" href="tel:+905551234567"><svg><use href="#ic-phone"/></svg><span>Hemen Ara</span></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 7. REVIEWS -->
-  <section class="reviews sec" id="yorumlar">
-    <div class="wrap">
-      <div class="rev-summary reveal">
+      <div class="srv-row reveal" data-img="unnamed (9).jpg">
+        <span class="srv-num">04</span>
         <div>
-          <span class="rev-num">5,0</span>
-          <div class="stars" aria-label="5 üzerinden 5 yıldız">
-            <svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg>
+          <div class="srv-name">Kalıcı Perma &amp; Su Dalgası</div>
+          <div class="srv-desc">Saç esnekliğini kaybettirmeden hacimli, doğal ve uzun ömürlü bukleler.</div>
+        </div>
+        <div class="srv-price">₺1.600 <small>başlayan</small></div>
+        <div class="srv-arrow"><svg><use href="#ic-arrow"/></svg></div>
+      </div>
+
+      <div class="srv-row reveal" data-img="unnamed (11).jpg">
+        <span class="srv-num">05</span>
+        <div>
+          <div class="srv-name">Gelin Saçı &amp; Profesyonel Makyaj</div>
+          <div class="srv-desc">Özel gününüz için prova dahil, duvak takımı ve gün boyu bozulmayan porselen makyaj.</div>
+        </div>
+        <div class="srv-price">₺4.500 <small>paket</small></div>
+        <div class="srv-arrow"><svg><use href="#ic-arrow"/></svg></div>
+      </div>
+
+      <div class="srv-row reveal" data-img="unnamed (7).jpg">
+        <span class="srv-num">06</span>
+        <div>
+          <div class="srv-name">Dip &amp; Tüm Saç Boyası</div>
+          <div class="srv-desc">Amonyaksız veya organik içerikli boyalarla canlı, parlak ve kalıcı renkler.</div>
+        </div>
+        <div class="srv-price">₺800 <small>başlayan</small></div>
+        <div class="srv-arrow"><svg><use href="#ic-arrow"/></svg></div>
+      </div>
+    </div>
+
+    <div class="srv-foot reveal">
+      <p>* Detaylı fiyat bilgisi ve saç analiziniz için WhatsApp üzerinden fotoğraf göndererek anında bilgi alabilirsiniz.</p>
+      <a href="https://wa.me/905551234567?text=Merhaba,%20hizmetler%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" class="btn btn-ghost">
+        <span>Fiyat &amp; Danışmanlık Al</span>
+        <svg><use href="#ic-wa"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Hover Preview element for desktop -->
+<img src="" alt="Hizmet Önizleme" class="srv-preview" id="srv-preview">
+
+<!-- Before / After -->
+<section class="sec ba-sec" id="before-after">
+  <div class="wrap ba-wrap">
+    <div class="sec-head reveal">
+      <div>
+        <div class="eyebrow"><span class="dash"></span>Gerçek Değişimler</div>
+        <h2 class="sec-title">Öncesi &amp; <em>Sonrası</em>.</h2>
+      </div>
+      <div class="sec-note">Karanlık, mat veya yıpranmış saçların Volkan Hair Stylist dokunuşuyla yaşadığı muazzam dönüşümler.</div>
+    </div>
+
+    <div class="ba-tabs reveal" id="ba-tabs">
+      <button class="ba-tab active" data-b="unnamed (7).jpg" data-a="unnamed (5).jpg">Baleyaj Dönüşümü</button>
+      <button class="ba-tab" data-b="unnamed (9).jpg" data-a="unnamed (8).jpg">Keratin Düzleştirme</button>
+      <button class="ba-tab" data-b="unnamed (11).jpg" data-a="unnamed (7).jpg">Renk Düzeltme &amp; Bakım</button>
+    </div>
+
+    <div class="ba-stage reveal" id="ba-stage">
+      <img src="unnamed (5).jpg" alt="Sonrası Saç Tasarımı" class="ba-img ba-after" id="ba-img-after">
+      <img src="unnamed (7).jpg" alt="Öncesi Saç Tasarımı" class="ba-img ba-before" id="ba-img-before">
+      <div class="ba-line"></div>
+      <div class="ba-handle" tabindex="0" aria-label="Öncesi sonrası kaydırıcı">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg>
+      </div>
+      <span class="ba-tag ba-tag-l">ÖNCESİ</span>
+      <span class="ba-tag ba-tag-r">SONRASI</span>
+    </div>
+    <div class="ba-hint reveal"><span class="dash"></span> Kaydırmak için halkanı sürükleyin veya fotoğrafa tıklayın</div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section class="sec gallery" id="gallery">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <div class="eyebrow"><span class="dash"></span>Canlı Portfolyo</div>
+        <h2 class="sec-title">Salon <em>Galeri</em>.</h2>
+      </div>
+      <a href="https://www.instagram.com/volkanhairstylist" target="_blank" rel="noopener" class="ig-link">
+        <svg><use href="#ic-ig"/></svg>
+        <span>@volkanhairstylist Instagram</span>
+      </a>
+    </div>
+
+    <div class="masonry reveal">
+      <figure class="g-item">
+        <img src="unnamed (5).jpg" alt="Volkan Hair Stylist Saç Tasarımı" loading="lazy">
+        <figcaption>
+          <span>Soft Baleyaj &amp; Fön</span>
+          <em>İzmir Üçyol Salon Work</em>
+        </figcaption>
+      </figure>
+
+      <figure class="g-item">
+        <img src="unnamed (7).jpg" alt="Volkan Hair Stylist Renklendirme" loading="lazy">
+        <figcaption>
+          <span>Mikro Röfle &amp; Sombre</span>
+          <em>Doğal Geçişler</em>
+        </figcaption>
+      </figure>
+
+      <figure class="g-item">
+        <img src="unnamed (8).jpg" alt="Volkan Hair Stylist Keratin Bakımı" loading="lazy">
+        <figcaption>
+          <span>Yoğun Keratin Terapi</span>
+          <em>Pürüzsüz &amp; Parlak Saçlar</em>
+        </figcaption>
+      </figure>
+
+      <figure class="g-item">
+        <img src="unnamed (9).jpg" alt="Volkan Hair Stylist Perma Uygulaması" loading="lazy">
+        <figcaption>
+          <span>Hacimli Su Dalgası</span>
+          <em>Kalıcı Buğulu Dalgalar</em>
+        </figcaption>
+      </figure>
+
+      <figure class="g-item">
+        <img src="unnamed (11).jpg" alt="Volkan Hair Stylist Gelin Saçı Makyaj" loading="lazy">
+        <figcaption>
+          <span>Gelin Saçı &amp; Porselen Makyaj</span>
+          <em>Özel Gün Konsepti</em>
+        </figcaption>
+      </figure>
+
+      <figure class="g-item">
+        <img src="unnamed (5).jpg" alt="Volkan Hair Stylist Özel Kesim" loading="lazy">
+        <figcaption>
+          <span>Modern Katlı Saç Kesimi</span>
+          <em>Kişiye Özel Stil</em>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- Promo -->
+<section class="sec promo">
+  <div class="promo-bg">
+    <img src="unnamed (11).jpg" alt="Volkan Hair Stylist Özel Kampanya">
+  </div>
+  <div class="wrap">
+    <div class="promo-frame reveal">
+      <div class="eyebrow"><span class="dash"></span>Sezon Özel Fırsatı</div>
+      <h2>Gelin Paketi &amp; Bakım İndirimlerinde <em>Şimdi Yerinizi Ayırın</em>.</h2>
+      <p>Erken gelin randevularında ücretsiz saç provası ve tüm renklendirme işlemlerinin yanında keratin dip bakımı hediyemizdir.</p>
+      <div class="promo-perks">
+        <span>• Ücretsiz Saç Analizi</span>
+        <span>• Orijinal İthal Ürünler</span>
+        <span>• VIP Salon Hizmeti</span>
+      </div>
+      <div class="promo-cta">
+        <a href="https://wa.me/905551234567?text=Merhaba,%20özel%20kampanya%20paketleri%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" class="btn btn-solid">
+          <span>Kampanya Fiyatı Al</span>
+          <svg><use href="#ic-wa"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section class="sec reviews" id="reviews">
+  <div class="wrap">
+    <div class="rev-summary reveal">
+      <div>
+        <span class="rev-num">5.0</span>
+        <div class="stars">
+          <svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg>
+        </div>
+        <span class="rev-src">Google Maps Değerlendirmeleri</span>
+      </div>
+      <div class="rev-lead">Üçyol'da bizi tercih eden müşterilerimizin tamamı Google Maps üzerinden %100 memnuniyet ve 5 yıldızlı tam puan verdi.</div>
+    </div>
+
+    <div class="rev-viewport reveal">
+      <div class="rev-track" id="rev-track">
+        <div class="rev-card">
+          <div class="rev-quote">“</div>
+          <div class="rev-text">Volkan Beye arkadaşımın tavsiyesiyle baleyaj için gittim. Yıpranmış ve koyu olan saçlarımı hiç yıpratmadan tam istediğim sarı tonuna getirdi. Güler yüzü ve temiz salonu için teşekkür ederim!</div>
+          <div class="rev-who">
+            <div class="rev-ava">S</div>
+            <div class="rev-name">Selin A.<i>Google Yorumu</i></div>
+            <div class="stars"><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg></div>
           </div>
-          <span class="rev-src">200+ Google Değerlendirmesi</span>
         </div>
-        <p class="rev-lead">Bizi en iyi, misafirlerimiz anlatır. İzmir Üçyol'da 5.0 puanla en çok tercih edilen bayan kuaförlerinden biri olmaktan gurur duyuyoruz.</p>
-      </div>
 
-      <div class="rev-viewport" id="revViewport">
-        <div class="rev-track" id="revTrack">
-          <article class="rev-card">
-            <span class="rev-quote">“</span>
-            <p class="rev-text">Volkan Usta'ya ilk randevumda saçımın nasıl olmasını istediğimi anlattım, sonuç hayalimden bile güzeldi. Üçyol'da iz bırakan bir kalite.</p>
-            <div class="rev-who"><span class="rev-ava">E</span><span class="rev-name">Elif K.<i>Google Yorumu</i></span>
-              <span class="stars"><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg></span></div>
-          </article>
-          <article class="rev-card">
-            <span class="rev-quote">“</span>
-            <p class="rev-text">Baleyaj için üç farklı salona gittim, en iyi sonucu burada aldım. Saçım hiç zarar görmeden istediğim açık renge ulaştım.</p>
-            <div class="rev-who"><span class="rev-ava">M</span><span class="rev-name">Merve T.<i>Google Yorumu</i></span>
-              <span class="stars"><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg></span></div>
-          </article>
-          <article class="rev-card">
-            <span class="rev-quote">“</span>
-            <p class="rev-text">Gelin paketi için tercih ettim; deneme seansında her detayı sabırla dinlediler. Düğün günü herkes saçımı sordu.</p>
-            <div class="rev-who"><span class="rev-ava">Z</span><span class="rev-name">Zeynep A.<i>Google Yorumu</i></span>
-              <span class="stars"><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg></span></div>
-          </article>
-          <article class="rev-card">
-            <span class="rev-quote">“</span>
-            <p class="rev-text">Hijyen, ilgi, profesyonellik... Beş yıldır başka yere gitmiyorum. Keratin bakımı sonrası saçım ipek gibi oluyor.</p>
-            <div class="rev-who"><span class="rev-ava">A</span><span class="rev-name">Ayşe D.<i>Google Yorumu</i></span>
-              <span class="stars"><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg></span></div>
-          </article>
-          <article class="rev-card">
-            <span class="rev-quote">“</span>
-            <p class="rev-text">Randevu saatine kesinlikle uyuyorlar, bekleme yok. WhatsApp'tan hızlıca dönüş yapıyorlar, bu kolaylık büyük artı.</p>
-            <div class="rev-who"><span class="rev-ava">S</span><span class="rev-name">Selin B.<i>Google Yorumu</i></span>
-              <span class="stars"><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg></span></div>
-          </article>
-          <article class="rev-card">
-            <span class="rev-quote">“</span>
-            <p class="rev-text">Kesim ve fön için gittim, çıkarken kendimi yenilenmiş hissettim. Salon çok şık ve ferah, gönül rahatlığıyla tavsiye ederim.</p>
-            <div class="rev-who"><span class="rev-ava">D</span><span class="rev-name">Deniz Y.<i>Google Yorumu</i></span>
-              <span class="stars"><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg></span></div>
-          </article>
+        <div class="rev-card">
+          <div class="rev-quote">“</div>
+          <div class="rev-text">Düğün günümde gelin saçım ve makyajım için tercih ettim. Akşama kadar ne saçım bozuldu ne de makyajım aktı. Tüm ekibin ilgisi harikaydı, İzmir Üçyol'un en iyi bayan kuaförü net!</div>
+          <div class="rev-who">
+            <div class="rev-ava">M</div>
+            <div class="rev-name">Merve K.<i>Google Yorumu</i></div>
+            <div class="stars"><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg></div>
+          </div>
         </div>
-      </div>
 
-      <div class="rev-ctrl reveal">
-        <span class="rev-count" id="revCount"><b>01</b> — 04</span>
-        <div class="rev-btns">
-          <button class="rev-btn" id="revPrev" aria-label="Önceki yorum"><svg style="transform:rotate(180deg)"><use href="#ic-chev"/></svg></button>
-          <button class="rev-btn" id="revNext" aria-label="Sonraki yorum"><svg><use href="#ic-chev"/></svg></button>
+        <div class="rev-card">
+          <div class="rev-quote">“</div>
+          <div class="rev-text">Keratin bakımı ve kesim yaptırdım. Saçlarım ipek gibi oldu. İşini gerçekten aşkla yapan, saçın sağlığına sizden çok önem veren nadir kuaförlerden biri Volkan Bey. Kesinlikle tavsiye ederim.</div>
+          <div class="rev-who">
+            <div class="rev-ava">E</div>
+            <div class="rev-name">Elif Y.<i>Google Yorumu</i></div>
+            <div class="stars"><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg></div>
+          </div>
+        </div>
+
+        <div class="rev-card">
+          <div class="rev-quote">“</div>
+          <div class="rev-text">Perma yaptırmaktan korkuyordum ancak Volkan Bey tüm aşamaları anlatıp mükemmel doğal bukleler oluşturdu. Saçımda hiçbir yanma veya sertleşme olmadı. 5 yıldızı sonuna kadar hak ediyor.</div>
+          <div class="rev-who">
+            <div class="rev-ava">B</div>
+            <div class="rev-name">Büşra T.<i>Google Yorumu</i></div>
+            <div class="stars"><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg></div>
+          </div>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- 8. CONTACT -->
-  <section class="contact sec" id="iletisim">
-    <div class="wrap">
-      <div class="reveal" style="margin-bottom:10px">
-        <p class="eyebrow"><span class="dash"></span>06 — İletişim &amp; Konum</p>
-        <h2 class="sec-title">Salona <em>uğrayın.</em></h2>
-      </div>
-      <div class="contact-grid">
-        <div class="reveal">
-          <div class="c-block">
-            <span class="c-ico"><svg><use href="#ic-pin"/></svg></span>
-            <div>
-              <span class="c-label">Adres</span>
-              <p>Üçyol Mah. Şehit Nihatbey Caddesi No: 24/A, Konak / İzmir</p>
-              <a class="c-link" href="https://maps.google.com/?q=%C3%9C%C3%A7yol%2C%20Konak%2F%C4%B0zmir" target="_blank" rel="noopener">Yol Tarifi Al →</a>
-            </div>
-          </div>
-          <div class="c-block">
-            <span class="c-ico"><svg><use href="#ic-phone"/></svg></span>
-            <div>
-              <span class="c-label">Telefon</span>
-              <p><a href="tel:+905551234567">+90 555 123 45 67</a></p>
-              <a class="c-link" href="https://wa.me/905551234567?text=Merhaba%2C%20randevu%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp'tan Yaz →</a>
-            </div>
-          </div>
-          <div class="c-block">
-            <span class="c-ico"><svg><use href="#ic-ig"/></svg></span>
-            <div>
-              <span class="c-label">Sosyal</span>
-              <p>@volkanhairstylist — Güncel çalışmalar ve dönüşümler</p>
-              <a class="c-link" href="https://instagram.com/volkanhairstylist" target="_blank" rel="noopener">Instagram'da Gör →</a>
-            </div>
-          </div>
-          <div class="hours reveal">
-            <div class="hours-top">
-              <b>Çalışma Saatleri</b>
-              <span class="status" id="openStatus"><i></i><span>—</span></span>
-            </div>
-            <div class="hours-row"><span>Pazartesi — Cuma</span><span>09.00 — 20.00</span></div>
-            <div class="hours-row"><span>Cumartesi</span><span>09.00 — 20.00</span></div>
-            <div class="hours-row"><span>Pazar</span><span>Kapalı</span></div>
-          </div>
-        </div>
-        <div class="map-frame reveal">
-          <iframe title="Volkan Hair Stylist — İzmir Üçyol konum haritası" loading="lazy" decoding="async" referrerpolicy="no-referrer-when-downgrade"
-            src="https://maps.google.com/maps?q=%C3%9C%C3%A7yol%2C%20Konak%2F%C4%B0zmir&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
-        </div>
+    <div class="rev-ctrl reveal">
+      <div class="rev-count"><b id="rev-curr">01</b> / 04</div>
+      <div class="rev-btns">
+        <button class="rev-btn" id="rev-prev" aria-label="Önceki Yorum"><svg style="transform:rotate(180deg)"><use href="#ic-arrow"/></svg></button>
+        <button class="rev-btn" id="rev-next" aria-label="Sonraki Yorum"><svg><use href="#ic-arrow"/></svg></button>
       </div>
     </div>
-  </section>
-</main>
+  </div>
+</section>
+
+<!-- Contact & Map -->
+<section class="sec contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <div class="eyebrow"><span class="dash"></span>Lokasyon &amp; Randevu</div>
+      <h2 class="sec-title">Bizi Ziyaret <em>Edin</em>.</h2>
+
+      <div class="c-block">
+        <div class="c-ico"><svg><use href="#ic-pin"/></svg></div>
+        <div>
+          <span class="c-label">Adres</span>
+          <p>Atilla Mah. İnönü Cd. No: 87/D<br>35340 Konak / İzmir (Üçyol Metro Yakını)</p>
+          <a href="https://maps.app.goo.gl/EkJyoZjRwz1SyJ9C7" target="_blank" rel="noopener" class="c-link">
+            <span>Google Maps'te Aç</span>
+            <svg><use href="#ic-arrow"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="c-block">
+        <div class="c-ico"><svg><use href="#ic-phone"/></svg></div>
+        <div>
+          <span class="c-label">Telefon &amp; WhatsApp</span>
+          <p>+90 (555) 123 45 67</p>
+          <a href="https://wa.me/905551234567?text=Merhaba,%20randevu%20almak%20istiyorum." target="_blank" rel="noopener" class="c-link">
+            <span>WhatsApp Mesaj Gönder</span>
+            <svg><use href="#ic-wa"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hours">
+        <div class="hours-top">
+          <b>Çalışma Saatleri</b>
+          <span class="status open"><i></i> ŞU AN AÇIK</span>
+        </div>
+        <div class="hours-row"><span>Pazartesi — Cumartesi</span><span>08:30 – 20:30</span></div>
+        <div class="hours-row"><span>Pazar</span><span>Kapalı (Gelin Randevuları Hariç)</span></div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="map-frame">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3125.748682498522!2d27.1356!3d38.4095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbd8ddceaa1cdf%3A0x222e1aa01e855eb6!2zSXRtaXIgw5PDp3lvbCBCYXlhbiBLdWFmw7ZyIFZvbGthbiBIYWlyIFN0eWxpc3Q!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Volkan Hair Stylist İzmir Üçyol Konum"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Footer -->
 <footer class="footer">
   <div class="wrap">
-    <p class="foot-mark reveal">VOLKAN HAIR STYLIST</p>
-    <div class="foot-grid reveal">
+    <div class="foot-mark">VOLKAN HAIR STYLIST</div>
+    <div class="foot-grid">
       <div class="foot-col">
-        <h4>Konum</h4>
-        <p>Üçyol Mah. Şehit Nihatbey Cd. No: 24/A<br>Konak / İzmir</p>
+        <h4>Volkan Hair Stylist</h4>
+        <p>İzmir Üçyol'un en yüksek puanlı lüks bayan kuaförü salonu. Saçınız için sanatsal çözümler ve kişiye özel bakım uygulamaları.</p>
         <div class="foot-social">
-          <a href="https://instagram.com/volkanhairstylist" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#ic-ig"/></svg></a>
+          <a href="https://www.instagram.com/volkanhairstylist" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#ic-ig"/></svg></a>
           <a href="https://wa.me/905551234567" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#ic-wa"/></svg></a>
-          <a href="tel:+905551234567" aria-label="Telefon"><svg><use href="#ic-phone"/></svg></a>
+          <a href="https://maps.app.goo.gl/EkJyoZjRwz1SyJ9C7" target="_blank" rel="noopener" aria-label="Google Maps"><svg><use href="#ic-pin"/></svg></a>
         </div>
       </div>
+
       <div class="foot-col">
-        <h4>Menü</h4>
-        <a href="#hakkimizda">Hakkımızda</a>
-        <a href="#hizmetler">Hizmetler</a>
-        <a href="#donusumler">Dönüşümler</a>
-        <a href="#galeri">Galeri</a>
-        <a href="#yorumlar">Yorumlar</a>
-        <a href="#iletisim">İletişim</a>
+        <h4>Hızlı Menü</h4>
+        <a href="#about">Hakkımızda</a>
+        <a href="#services">Hizmetlerimiz</a>
+        <a href="#before-after">Öncesi / Sonrası</a>
+        <a href="#gallery">Saç Galerisi</a>
+        <a href="#reviews">Müşteri Yorumları</a>
       </div>
+
       <div class="foot-col">
-        <h4>Hizmetler</h4>
-        <a href="#hizmetler">Saç Kesimi</a>
-        <a href="#hizmetler">Renk &amp; Boya</a>
-        <a href="#hizmetler">Baleyaj &amp; Röfle</a>
-        <a href="#hizmetler">Keratin &amp; Bakım</a>
-        <a href="#hizmetler">Gelin Paketi</a>
-        <a href="#hizmetler">Fön &amp; Styling</a>
+        <h4>Hizmetlerimiz</h4>
+        <a href="#services">Baleyaj &amp; Ombre</a>
+        <a href="#services">Keratin Brezilya Fönü</a>
+        <a href="#services">Gelin Saçı &amp; Makyaj</a>
+        <a href="#services">Kalıcı Perma</a>
+        <a href="#services">Saç Kesimi &amp; Boya</a>
       </div>
+
       <div class="foot-col">
-        <h4>Randevu</h4>
-        <p>Hafta içi &amp; Cumartesi<br>09.00 — 20.00</p>
-        <a class="c-link" href="https://wa.me/905551234567?text=Merhaba%2C%20randevu%20almak%20istiyorum." target="_blank" rel="noopener" style="margin-top:14px">Quick Randevu →</a>
+        <h4>İletişim</h4>
+        <p>İnönü Cd. No: 87/D, Üçyol, Konak / İzmir</p>
+        <p style="margin-top:10px;">Tel: +90 (555) 123 45 67</p>
+        <p style="margin-top:4px;">Pzt - Cmt: 08:30 - 20:30</p>
       </div>
     </div>
+
     <div class="foot-bottom">
-      <p>© 2025 Volkan Hair Stylist — Tüm hakları saklıdır.</p>
-      <p>İzmir · Üçyol — Est. 2009</p>
+      <p>© 2026 Volkan Hair Stylist. Tüm hakları saklıdır.</p>
+      <p>İzmir Üçyol Bayan Kuaförü — Lüks Saç Tasarım Salonu</p>
     </div>
-    <p class="foot-seo">İzmir Üçyol bayan kuaförü | Volkan Hair Stylist — bayan saç kesimi, saç boyama, baleyaj, röfle, keratin bakımı, saç botoksu, gelin saçı ve gelin makyajı, nişan ve organizasyon saçı, fön ve şekillendirme hizmetleri. Konak, Balçova, Narlıdere ve çevre semtlere yakın, Üçyol metro durağına yürüme mesafesinde butik kuaför salonu.</p>
+
+    <div class="foot-seo">
+      <strong>Anahtar Kelimeler:</strong> İzmir Üçyol bayan kuaförü, İzmir Üçyol kuaför, Volkan Hair Stylist, İzmir baleyaj fiyatları, Üçyol keratin bakım, İzmir gelin saçı makyaj, Üçyol perma kuaför, Konak bayan kuaförü.
+    </div>
   </div>
 </footer>
 
-<!-- Floating WhatsApp -->
-<a class="fab" href="https://wa.me/905551234567?text=Merhaba%2C%20randevu%20almak%20istiyorum." target="_blank" rel="noopener" aria-label="WhatsApp ile Quick Randevu"><svg><use href="#ic-wa"/></svg></a>
+<!-- Floating WhatsApp Action Button -->
+<a href="https://wa.me/905551234567?text=Merhaba,%20randevu%20almak%20istiyorum." target="_blank" rel="noopener" class="fab" aria-label="WhatsApp Quick Randevu">
+  <svg><use href="#ic-wa"/></svg>
+</a>
 
-<!-- Service hover preview -->
-<img class="srv-preview" id="srvPreview" src="https://picsum.photos/seed/vhs-s1/640/440.webp?grayscale" alt="" aria-hidden="true">
-
+<!-- Interactive Scripts -->
 <script>
-(function(){
-  'use strict';
-  var fine = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
-  var WA = 'https://wa.me/905551234567';
-
-  /* ---------- Loader ---------- */
-  var loader = document.getElementById('loader');
-  var loaderDone = false;
-  function hideLoader(){
-    if(loaderDone) return; loaderDone = true;
-    loader.classList.add('done');
+window.addEventListener('DOMContentLoaded', () => {
+  // Hide loader
+  setTimeout(() => {
+    document.getElementById('loader').classList.add('done');
     document.body.classList.add('loaded');
-    setTimeout(function(){ if(loader.parentNode) loader.parentNode.removeChild(loader); }, 1100);
-  }
-  window.addEventListener('load', function(){ setTimeout(hideLoader, 350); });
-  setTimeout(hideLoader, 2400);
+  }, 900);
 
-  /* ---------- Header scroll ---------- */
-  var header = document.getElementById('header');
-  function onScroll(){ header.classList.toggle('scrolled', window.scrollY > 40); }
-  onScroll();
-  window.addEventListener('scroll', onScroll, {passive:true});
+  // Header Scroll
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 40) header.classList.add('scrolled');
+    else header.classList.remove('scrolled');
+  });
 
-  /* ---------- Mobile menu ---------- */
-  var burger = document.getElementById('burger');
-  var menu = document.getElementById('menu');
-  function closeMenu(){
-    menu.classList.remove('open'); burger.classList.remove('x');
+  // Mobile Menu
+  const burger = document.getElementById('burger');
+  const menu = document.getElementById('menu');
+  const mLinks = document.querySelectorAll('.m-link');
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('x');
+    menu.classList.toggle('open');
+    document.body.classList.toggle('menu-open');
+  });
+  mLinks.forEach(l => l.addEventListener('click', () => {
+    burger.classList.remove('x');
+    menu.classList.remove('open');
     document.body.classList.remove('menu-open');
-  }
-  burger.addEventListener('click', function(){
-    var open = menu.classList.toggle('open');
-    burger.classList.toggle('x', open);
-    document.body.classList.toggle('menu-open', open);
-  });
-  menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu); });
+  }));
 
-  /* ---------- Reveal on scroll ---------- */
-  var staggerGroups = document.querySelectorAll('[data-stagger]');
-  staggerGroups.forEach(function(g){
-    Array.prototype.forEach.call(g.children, function(c,i){
-      c.classList.add('reveal');
-      c.style.transitionDelay = (i * 80) + 'ms';
-    });
-  });
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){
-        e.target.classList.add('in');
-        var d = e.target.style.transitionDelay;
-        if(d){ setTimeout(function(){ e.target.style.transitionDelay = ''; }, 1400); }
-        io.unobserve(e.target);
+  // Reveal Animations
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
       }
     });
-  }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
-  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => observer.observe(el));
 
-  /* ---------- Counters ---------- */
-  function animateCount(el){
-    var target = parseFloat(el.dataset.count);
-    var dec = parseInt(el.dataset.decimals || 0, 10);
-    var suf = el.dataset.suffix || '';
-    var dur = 1700, start = performance.now();
-    function step(now){
-      var p = Math.min((now - start) / dur, 1);
-      var e = 1 - Math.pow(1 - p, 3);
-      var v = target * e;
-      el.textContent = v.toLocaleString('tr-TR', {minimumFractionDigits:dec, maximumFractionDigits:dec}) + suf;
-      if(p < 1) requestAnimationFrame(step);
-    }
-    requestAnimationFrame(step);
-  }
-  var cio = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){ cio.unobserve(e.target); animateCount(e.target); }
-    });
-  }, {threshold:.5});
-  document.querySelectorAll('[data-count]').forEach(function(el){ cio.observe(el); });
-
-  /* ---------- Custom cursor ---------- */
-  if(fine){
-    document.body.classList.add('has-cursor');
-    var dot = document.getElementById('cDot');
-    var ring = document.getElementById('cRing');
-    var label = document.getElementById('cLabel');
-    var mx = -100, my = -100, rx = -100, ry = -100, live = false;
-    window.addEventListener('mousemove', function(e){
-      mx = e.clientX; my = e.clientY;
-      dot.style.transform = 'translate(' + mx + 'px,' + my + 'px) translate(-50%,-50%)';
-      if(!live){ live = true; dot.classList.add('live'); ring.classList.add('live'); }
-    });
-    (function loop(){
-      rx += (mx - rx) * .18; ry += (my - ry) * .18;
-      ring.style.transform = 'translate(' + rx + 'px,' + ry + 'px) translate(-50%,-50%)';
-      requestAnimationFrame(loop);
-    })();
-    document.addEventListener('mouseover', function(e){
-      var t = e.target.closest('a,button,.srv-row,.g-item,.ba-stage,[data-hover]');
-      ring.classList.toggle('grow', !!t);
-      var lb = t && t.closest('[data-label]');
-      ring.classList.toggle('drag', !!lb);
-      if(lb) label.textContent = lb.dataset.label;
-    });
-  }
-
-  /* ---------- Services floating preview ---------- */
-  var pv = document.getElementById('srvPreview');
-  var list = document.getElementById('srvList');
-  if(fine && pv && list){
-    var px = 0, py = 0, tx = 0, ty = 0, active = false;
-    list.querySelectorAll('.srv-row').forEach(function(r){
-      r.addEventListener('mouseenter', function(){
-        pv.src = r.dataset.img;
-        pv.classList.add('on'); active = true;
+  // Services Hover Preview (Desktop)
+  const srvRows = document.querySelectorAll('.srv-row');
+  const preview = document.getElementById('srv-preview');
+  if (window.innerWidth > 992) {
+    srvRows.forEach(row => {
+      row.addEventListener('mouseenter', () => {
+        const imgSrc = row.getAttribute('data-img');
+        if (imgSrc) {
+          preview.src = imgSrc;
+          preview.classList.add('on');
+        }
       });
-      r.addEventListener('mouseleave', function(){
-        pv.classList.remove('on'); active = false;
+      row.addEventListener('mousemove', e => {
+        preview.style.left = (e.clientX + 25) + 'px';
+        preview.style.top = (e.clientY - 100) + 'px';
+      });
+      row.addEventListener('mouseleave', () => {
+        preview.classList.remove('on');
       });
     });
-    list.addEventListener('mousemove', function(e){
-      tx = e.clientX + 30; ty = e.clientY - 100;
-    });
-    (function loop(){
-      px += (tx - px) * .12; py += (ty - py) * .12;
-      if(active){ pv.style.left = px + 'px'; pv.style.top = py + 'px'; }
-      requestAnimationFrame(loop);
-    })();
   }
 
-  /* ---------- Before / After slider ---------- */
-  var stage = document.getElementById('baStage');
-  var handle = document.getElementById('baHandle');
-  function setPos(p){
-    p = Math.max(4, Math.min(96, p));
-    stage.style.setProperty('--pos', p + '%');
-  }
-  var dragging = false;
-  function movePos(e){
-    if(!dragging) return;
-    var r = stage.getBoundingClientRect();
-    setPos((e.clientX - r.left) / r.width * 100);
-  }
-  stage.addEventListener('pointerdown', function(e){
-    dragging = true;
-    if(stage.setPointerCapture) stage.setPointerCapture(e.pointerId);
-    movePos(e);
-    e.preventDefault();
-  });
-  stage.addEventListener('pointermove', movePos);
-  ['pointerup','pointercancel','pointerleave'].forEach(function(ev){
-    stage.addEventListener(ev, function(){ dragging = false; });
-  });
-  handle.addEventListener('keydown', function(e){
-    var cur = parseFloat(stage.style.getPropertyValue('--pos')) || 50;
-    if(e.key === 'ArrowLeft'){ setPos(cur - 4); e.preventDefault(); }
-    if(e.key === 'ArrowRight'){ setPos(cur + 4); e.preventDefault(); }
-  });
+  // Before / After Slider
+  const stage = document.getElementById('ba-stage');
+  const handle = stage.querySelector('.ba-handle');
+  const imgBefore = document.getElementById('ba-img-before');
+  const imgAfter = document.getElementById('ba-img-after');
+  let isDragging = false;
 
-  /* ---------- BA tabs ---------- */
-  var baBefore = document.getElementById('baBefore');
-  var baAfter = document.getElementById('baAfter');
-  var tabs = document.querySelectorAll('.ba-tab');
-  tabs.forEach(function(t){
-    t.addEventListener('click', function(){
-      if(t.classList.contains('active')) return;
-      tabs.forEach(function(x){ x.classList.remove('active'); x.setAttribute('aria-selected','false'); });
-      t.classList.add('active'); t.setAttribute('aria-selected','true');
-      baBefore.classList.add('sw'); baAfter.classList.add('sw');
-      setPos(50);
-      setTimeout(function(){
-        baBefore.src = t.dataset.before;
-        baAfter.src = t.dataset.after;
-        function done(){ baBefore.classList.remove('sw'); baAfter.classList.remove('sw'); }
-        if(baAfter.complete) done(); else baAfter.onload = done;
-      }, 260);
+  function setPos(x) {
+    const rect = stage.getBoundingClientRect();
+    let pos = ((x - rect.left) / rect.width) * 100;
+    pos = Math.max(0, Math.min(100, pos));
+    stage.style.setProperty('--pos', pos + '%');
+  }
+
+  stage.addEventListener('mousedown', e => { isDragging = true; setPos(e.clientX); });
+  window.addEventListener('mousemove', e => { if (isDragging) setPos(e.clientX); });
+  window.addEventListener('mouseup', () => { isDragging = false; });
+
+  stage.addEventListener('touchstart', e => { isDragging = true; setPos(e.touches[0].clientX); });
+  window.addEventListener('touchmove', e => { if (isDragging) setPos(e.touches[0].clientX); });
+  window.addEventListener('touchend', () => { isDragging = false; });
+
+  // BA Tabs
+  const baTabs = document.querySelectorAll('.ba-tab');
+  baTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      baTabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const bSrc = tab.getAttribute('data-b');
+      const aSrc = tab.getAttribute('data-a');
+      imgBefore.classList.add('sw');
+      imgAfter.classList.add('sw');
+      setTimeout(() => {
+        imgBefore.src = bSrc;
+        imgAfter.src = aSrc;
+        imgBefore.classList.remove('sw');
+        imgAfter.classList.remove('sw');
+      }, 200);
     });
   });
 
-  /* ---------- Reviews carousel ---------- */
-  var track = document.getElementById('revTrack');
-  var viewport = document.getElementById('revViewport');
-  var prev = document.getElementById('revPrev');
-  var next = document.getElementById('revNext');
-  var countEl = document.getElementById('revCount');
-  var cards = Array.prototype.slice.call(track.children);
-  var idx = 0, timer = null;
-  function perView(){ return window.innerWidth > 992 ? 3 : (window.innerWidth > 640 ? 2 : 1); }
-  function maxIdx(){ return Math.max(0, cards.length - perView()); }
-  function pad(n){ return n < 10 ? '0' + n : '' + n; }
-  function update(){
-    idx = Math.min(idx, maxIdx());
-    track.style.transform = 'translateX(' + (-cards[idx].offsetLeft) + 'px)';
-    countEl.innerHTML = '<b>' + pad(idx + 1) + '</b> — ' + pad(maxIdx() + 1);
-  }
-  function go(d){
-    var m = maxIdx();
-    idx = (idx + d) % (m + 1);
-    if(idx < 0) idx = m;
-    update();
-  }
-  function restart(){ clearInterval(timer); timer = setInterval(function(){ go(1); }, 4800); }
-  prev.addEventListener('click', function(){ go(-1); restart(); });
-  next.addEventListener('click', function(){ go(1); restart(); });
-  viewport.addEventListener('mouseenter', function(){ clearInterval(timer); });
-  viewport.addEventListener('mouseleave', restart);
-  window.addEventListener('resize', update);
-  window.addEventListener('load', update);
-  update(); restart();
+  // Reviews Slider
+  const track = document.getElementById('rev-track');
+  const prevBtn = document.getElementById('rev-prev');
+  const nextBtn = document.getElementById('rev-next');
+  const currTxt = document.getElementById('rev-curr');
+  let index = 0;
+  const cards = document.querySelectorAll('.rev-card');
 
-  /* ---------- Open-now status ---------- */
-  var statusEl = document.getElementById('openStatus');
-  if(statusEl){
-    var now = new Date();
-    var day = now.getDay();
-    var h = now.getHours() + now.getMinutes() / 60;
-    var open = (day !== 0) && (h >= 9) && (h < 20);
-    statusEl.classList.toggle('open', open);
-    statusEl.querySelector('span').textContent = open ? 'Şu An Açık · 20.00’a kadar' : 'Şu An Kapalı';
+  function getVisibleCount() {
+    if (window.innerWidth <= 640) return 1;
+    if (window.innerWidth <= 992) return 2;
+    return 3;
   }
-})();
+
+  function updateSlider() {
+    const visible = getVisibleCount();
+    const maxIndex = cards.length - visible;
+    if (index > maxIndex) index = maxIndex;
+    if (index < 0) index = 0;
+    
+    const cardWidth = cards[0].offsetWidth + 20;
+    track.style.transform = `translateX(-${index * cardWidth}px)`;
+    currTxt.textContent = (index + 1).toString().padStart(2, '0');
+  }
+
+  nextBtn.addEventListener('click', () => {
+    const visible = getVisibleCount();
+    if (index < cards.length - visible) index++;
+    else index = 0;
+    updateSlider();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    const visible = getVisibleCount();
+    if (index > 0) index--;
+    else index = cards.length - visible;
+    updateSlider();
+  });
+
+  window.addEventListener('resize', updateSlider);
+});
 </script>
 </body>
 </html>
